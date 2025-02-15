@@ -13,9 +13,9 @@ class Genrate_Password:
         digits = string.digits if self.use_Digits else ''
         special = string.punctuation if self.use_Special else ''
 
-        all = lower + upper + digits + special
+        p = lower + upper + digits + special
 
-        password = ''.join(random(all) for _ in range(self.lenght)) 
+        password = ''.join(random.choice(p) for _ in range(self.lenght)) 
         
 
         if not all:
